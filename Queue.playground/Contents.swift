@@ -1,3 +1,4 @@
+import Foundation
 class Node<T> {
     var value: T
     var next: Node<T>?
@@ -18,7 +19,7 @@ class Queue<T> {
         self.count = 0
     }
     
-    //Add from Tail of Queue
+    //Adding Tail of Queue
     func add(_ value: T) {
         let newNode = Node(value)
         
@@ -33,7 +34,7 @@ class Queue<T> {
         count += 1
     }
     
-    //Remove from Head of Queue
+    //Removing Head of Queue
     func remove() -> T? {
         // Not Empty Queue
         if let currentFront = front {
@@ -48,12 +49,12 @@ class Queue<T> {
         }
     }
     
-    //Length of Queue
+    //Returning Length of Queue
     func length() -> Int {
         return count
     }
     
-    // Print the Queue
+    //Printing the Queue
     func printQueue() {
         var current = front
         while current != nil {
